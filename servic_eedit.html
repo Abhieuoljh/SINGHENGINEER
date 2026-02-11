@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Services</title>
+  <link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body onload="checkLogin(); loadServices();">
+
+<h2>Edit Services</h2>
+
+<div class="panel">
+  <input id="serviceTitle" placeholder="Service Title">
+  <textarea id="serviceDesc" placeholder="Service Description"></textarea>
+  <button onclick="saveService()">Save Service</button>
+</div>
+
+<hr>
+
+<h3>Saved Services</h3>
+<ul id="serviceList"></ul>
+
+<script src="assets/js/admin-auth.js"></script>
+<script src="assets/js/admin-content.js"></script>
+</body>
+</html>

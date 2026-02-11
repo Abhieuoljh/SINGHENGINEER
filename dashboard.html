@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="admin.css">
+  <link rel="stylesheet" href="sr-only.css">
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body onload="checkLogin()">
+
+<!-- ===== SIDEBAR ===== -->
+<aside class="sidebar">
+  <div class="logo">
+    <i class="fa-solid fa-layer-group"></i>
+    <span>AdminPro</span>
+  </div>
+
+  <nav>
+    <a class="active" href="dashboard.html">
+      <i class="fa-solid fa-gauge-high"></i><span>Dashboard</span>
+    </a>
+    <a href="edit-home.html">
+      <i class="fa-solid fa-house"></i><span>Home</span>
+    </a>
+    <a href="edit-about.html">
+      <i class="fa-solid fa-user"></i><span>About</span>
+    </a>
+    <a href="edit-services.html">
+      <i class="fa-solid fa-briefcase"></i><span>Services</span>
+    </a>
+    <a href="edit-contact.html">
+      <i class="fa-solid fa-envelope"></i><span>Contact</span>
+    </a>
+
+    <div class="divider"></div>
+
+    <a href="logout.html" class="logout">
+      <i class="fa-solid fa-right-from-bracket"></i><span>Logout</span>
+    </a>
+  </nav>
+</aside>
+
+<!-- ===== MAIN ===== -->
+<main class="main">
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <h1>Dashboard</h1>
+
+  <div class="top-actions">
+    <i class="fa-regular fa-bell"></i>
+    <div class="profile">
+      <i class="fa-solid fa-user-circle"></i>
+      <span>Admin</span>
+    </div>
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme" title="Toggle theme">
+    <i class="fa-solid fa-moon" aria-hidden="true"></i>
+    <span class="sr-only">Toggle theme</span>
+  </button>
+  </button>
+  <button class="menu-toggle" onclick="toggleSidebar()" aria-label="Toggle menu" title="Toggle menu">
+    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    <span class="sr-only">Toggle menu</span>
+  </button>
+  </button>
+
+</header>
+
+  <!-- STATS -->
+  <section class="stats-grid">
+
+    <div class="stat-card blue">
+      <div>
+        <p>Total Pages</p>
+        <h2>4</h2>
+      </div>
+      <i class="fa-solid fa-file-lines"></i>
+    </div>
+
+    <div class="stat-card green">
+      <div>
+        <p>Services</p>
+        <h2>6</h2>
+      </div>
+      <i class="fa-solid fa-briefcase"></i>
+    </div>
+
+    <div class="stat-card orange">
+      <div>
+        <p>Messages</p>
+        <h2>12</h2>
+      </div>
+      <i class="fa-solid fa-envelope-open-text"></i>
+    </div>
+
+    <div class="stat-card purple">
+      <div>
+        <p>Website Status</p>
+        <h2>Live</h2>
+      </div>
+      <i class="fa-solid fa-circle-check"></i>
+    </div>
+
+  </section>
+
+  <!-- QUICK -->
+  <section class="panel">
+    <h3>Quick Actions</h3>
+
+    <div class="quick-grid">
+      <a href="edit-home.html">Edit Home</a>
+      <a href="edit-about.html">Edit About</a>
+      <a href="edit-services.html">Manage Services</a>
+      <a href="edit-contact.html">View Messages</a>
+    </div>
+  </section>
+
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>

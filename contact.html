@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — SINGH ENGINEERING PRIVATE LIMITED</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <!-- ====================== HEADER ====================== -->
+  <header class="header">
+    <div class="header-content">
+
+      <!-- Logo -->
+      <div class="logo-container">
+        <a href="index.html">
+          <img src="logo_img.JPG" alt="Singh Engineer" class="logo-img" />
+        </a>
+        <div>
+          <div class="brand-name">SINGH</div>
+          <div class="tagline">ENGINEER</div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <nav id="mainNav">
+        <ul class="nav-links">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="About.html">ABOUT</a></li>
+          <li><a href="services.html">SERVICES</a></li>
+          <li><a href="dashboard.html">LOGIN</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Buttons -->
+      <div class="right-actions">
+        <a class="btn-call" href="tel:+916209851220">
+          <i class="fas fa-phone-alt"></i> Phone
+        </a>
+
+        <!-- Mobile Menu Icon -->
+        <button class="menu-toggle" id="menu-toggle6" aria-label="Toggle navigation menu" title="Toggle navigation menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+  
+  <!-- Scroll To Top Button -->
+  <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- SCROLLER STRIP -->
+  <div class="scroller">
+    <div class="scroller-inner">
+      <div class="scroller-track">
+        <span class="scroller-item">Singh Engineering</span>
+        <span class="scroller-item">Quality Products</span>
+        <span class="scroller-item">Innovative Solutions</span>
+      </div>
+    </div>
+  </div>
+
+<!-- ================= CONTACT SECTION ================= -->
+<section class="contact-section" id="contact">
+
+  <!-- Header -->
+  <div class="contact-header">
+    <h2>Contact Us</h2>
+    <p>Get in touch with Singh Engineering for IT, Computer & Web Services</p>
+  </div>
+
+  <!-- Contact Cards -->
+  <div class="contact-cards">
+
+    <a href="tel:+916200988521" class="contact-card">
+      <i class="fa-solid fa-phone"></i>
+      <h4>Call Us</h4>
+      <p>+91 62009 88521</p>
+    </a>
+
+    <a href="mailto:info@singhengineering.in" class="contact-card">
+      <i class="fa-solid fa-envelope"></i>
+      <h4>Email</h4>
+      <p>info@singhengineering.in</p>
+    </a>
+
+    <a href="https://wa.me/916200988521?text=Hello%20Singh%20Engineering,%20I%20need%20your%20services"
+       target="_blank" rel="noopener noreferrer"
+       class="contact-card whatsapp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <h4>WhatsApp</h4>
+      <p>Chat with us</p>
+    </a>
+
+    <a href="https://www.google.com/maps?q=Jamshedpur"
+       target="_blank" rel="noopener noreferrer"
+       class="contact-card">
+      <i class="fa-solid fa-location-dot"></i>
+      <h4>Visit Office</h4>
+      <p>Jamshedpur, Jharkhand</p>
+    </a>
+
+  </div>
+
+  <!-- Contact Form + Map -->
+  <div class="contact-wrapper">
+
+    <script>
+function submitForm(e) {
+  e.preventDefault();
+
+  const data = {
+    name: e.target[0].value,
+    email: e.target[1].value,
+    phone: e.target[2].value,
+    message: e.target[3].value,
+    date: new Date().toISOString()
+  };
+  let msgs = JSON.parse(localStorage.getItem("messages")) || [];
+  msgs.push(data);
+  localStorage.setItem("messages", JSON.stringify(msgs));
+
+  alert("Message Sent!");
+  e.target.reset();
+}
+</script>
+    <!-- Contact Form -->
+    <form class="contact-form" onsubmit="submitForm(event)">
+      <h3>Send Message</h3>
+
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="tel" placeholder="Your Phone" required>
+      <textarea placeholder="Your Message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Map -->
+    <div class="contact-map">
+      <iframe
+        title="Map showing Jamshedpur, Jharkhand"
+        src="https://www.google.com/maps?q=Jamshedpur&output=embed"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+   </main> 
+   
+<!-- ====================== INQUIRY FORM ====================== -->
+
+<section class="inq-section">
+  <div class="inq-container">
+
+    <!-- LEFT INFO PANEL -->
+    <div class="inq-info-panel">
+      <h2>Let’s Talk</h2>
+      <p>
+        Have a question or need support?  
+        Drop your enquiry and our team will contact you shortly.
+      </p>
+
+      <ul class="inq-details">
+        <li>📞 +91-6200988521</li>
+        <li>✉️ singhengineer@gmail.com</li>
+        <li>🕒 Available 24×7</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT FORM PANEL -->
+    <div class="inq-form-panel">
+      <form id="inqForm">
+        <div class="field">
+          <input id="fullName" name="fullName" type="text" required title="Full Name" placeholder="Full Name">
+          <label for="fullName">Full Name</label>
+        </div>
+
+        <div class="field">
+          <input id="email" name="email" type="email" required title="Email Address" placeholder="Email Address">
+          <label for="email">Email Address</label>
+        </div>
+
+        <div class="field">
+          <input id="phone" name="phone" type="tel" required title="Phone Number" placeholder="Phone Number">
+          <label for="phone">Phone Number</label>
+        </div>
+
+        <div class="field">
+          <input id="subject" name="subject" type="text" required title="Subject" placeholder="Subject">
+          <label for="subject">Subject</label>
+        </div>
+
+        <div class="field">
+          <textarea id="message" name="message" required title="Your Message" placeholder="Your Message"></textarea>
+          <label for="message">Your Message</label>
+        </div>
+
+        <button type="submit" id="inqBtn">Submit Enquiry</button>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+
+</footer>
+  <!-- WHATSAPP -->
+  <div class="whatsapp-float" onclick="toggleWhatsAppChat()" role="button" aria-label="Open WhatsApp chat">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+  </div>
+
+  <div class="whatsapp-chat-box" id="whatsappChatBox" aria-hidden="true">
+    <div class="chat-header">
+      Singh Engineering
+      <span class="close-chat" onclick="toggleWhatsAppChat()" role="button">×</span>
+    </div>
+    <div class="chat-body">
+      <p>👋 Hello! Need help or have a query?</p>
+      <a href="https://wa.me/916200988521" target="_blank" rel="noopener noreferrer" class="chat-now">Chat with Singh Engineering</a>
+    </div>
+  </div>
+
+  <!-- ====================== FOOTER ====================== -->
+
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <div class="footer-brand">
+            <h3>SINGH ENGINEER</h3>
+            <p>Innovative Web & Engineer Solutions</p>
+        </div>
+         <div class="footer-social">
+            <a href="#" class="facebook" title="Facebook" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/abhishek_coding_hub?igsh=MTgyMnkwdzRuZnE2Nw==" class="instagram" title="Instagram" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" class="twitter" title="X (Twitter)" aria-label="X (Twitter)"><i class="fab fa-x-twitter" aria-hidden="true"></i></a>
+            <a href="#" class="youtube" title="YouTube" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+            <a href="#" class="linkedin" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+         </div>
+
+        <div class="footer-copy">
+            © 2025 Singh Engineer. All Rights Reserved.
+            <p>Designed by <a href="https://abhieuoljh.github.io/singhengineering.com/index.html" target="_blank" rel="noopener noreferrer">SINGH ENGINEER</a></p>
+    
+        </div>
+
+    </div>
+</footer>
+
+  <script src="script.js"></script>
+
+  <script>
+    // Contact form demo handler (non-blocking)
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Thank you — your message has been sent!');
+      this.reset();
+    });
+
+    
+function submitForm(e) {
+  e.preventDefault();
+
+  const data = {
+    name: e.target[0].value,
+    email: e.target[1].value,
+    phone: e.target[2].value,
+    message: e.target[3].value,
+    date: new Date().toISOString()
+  };
+  let msgs = JSON.parse(localStorage.getItem("messages")) || [];
+  msgs.push(data);
+  localStorage.setItem("messages", JSON.stringify(msgs));
+
+  alert("Message Sent!");
+  e.target.reset();
+}
+
+  </script>
+</body>
+</html>
